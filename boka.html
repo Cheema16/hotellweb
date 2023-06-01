@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html lang="sv">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Royal Hotel">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link href="style.css" rel="stylesheet" >
+  <link href="grid.css" rel="stylesheet" >
+  <style>
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+    }
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .col-50 {
+      width: 30%;
+      float: left;
+    }
+    .col-50:last-child {
+      margin-left: 5%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img id="logo" src="logo.jpeg" alt="">
+    <img id="pool" src="hotel.jpeg" alt="">
+  </header>
+  <nav class="topnav" id="myTopnav">
+    <a href="index.html">Welcome</a>
+    <a href="boka.html" class="active">Boka</a>
+    <a href="hitta.html">Hitta</a>
+    <a href="kontakta.html">Kontakta</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </nav>
+  <section>
+    <div class="container">
+      <h1>Boka</h1>
+      <form action="tack.html">
+        <div class="row">
+          <div class="col-50">
+            <div class="row">
+              <label for="fname">Förnamn</label>
+              <input type="text" id="fname" name="firstname" placeholder="Ditt förnamn...">
+            </div>
+            <div class="row">
+              <label for="lname">Efternamn</label>
+              <input type="text" id="lname" name="lastname" placeholder="Ditt efterman...">
+            </div>
+            <div class="row">
+              <label for="Allergier">Allergier</label>
+              <input type="text" id="Allergier" name="Allergier" placeholder="Har du några allergier...">
+            </div>
+            <div class="row">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Din epost...">
+            </div>
+            <div class="row">
+              <label>Rumstyp</label>
+              <select id="typeroom" name="typeroom">
+                <option value="enkel">Enkelrum</option>
+                <option value="dubbel">Dubbelrum</option>
+                <option value="suit">Suit</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-50">
+            <div class="row" style="margin-left: 10px;">
+              <label for="subject">Övrigt</label>
+              <textarea id="subject" name="subject" placeholder="Övrig info..." style="height:200px"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p>Royal Hotel | Loremgatan 6 | 098 765 Ipsumstad | 1122-1212</p>
+  </footer>
+
+  <script src="script-nav.js"></script>
+</body>
+
+</html>

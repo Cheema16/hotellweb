@@ -1,0 +1,61 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto; /* Added 'auto' for the footer */
+    grid-template-areas: 
+      "header"
+      "nav"
+      "section"
+      "aside"
+      "footer"; /* Added 'footer' area */
+    grid-gap: 0.5em 1em;
+  }
+  
+  @media screen and (min-width: 600px) {
+    body {
+      grid-template-columns: 1fr 2fr; /* Adjusted the column widths */
+      grid-template-areas: 
+        "header  header"
+        "nav  nav"
+        "section  section"
+        "footer  footer"; /* Updated 'footer' area to span two columns */
+      grid-gap: 1em 2em;
+    }
+  }
+  
+  header {
+    /*background-color: #ddd;*/
+    grid-area: header;
+  }
+  
+  nav {
+    background-color: #777;
+    grid-area: nav;
+  }
+  
+  section {
+    background-color: #b6b6b6;
+    grid-area: section;
+
+  }
+  
+  article {
+    
+    grid-area: article;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  aside {
+    background-color: #ddd;
+    grid-area: aside;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  footer {
+    background-color: #b6b6b6;
+    grid-area: footer;
+    background-color: #b6b6b6;
+    justify-self: center; /* Added to center the footer horizontally */
+    width: 100%; /* Increase the width of the footer */
+  }
+  
